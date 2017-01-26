@@ -45,29 +45,29 @@ invalid_addresses = (
 
 def test_valid_address():
     for address in addresses:
-        assert (valid_address(address),
+        assert valid_address(address), (
                 'Invalid address, expected to be valid: ' + repr(address))
 
     for address in invalid_addresses:
-        assert (not valid_address(address),
+        assert not valid_address(address), (
                 'Valid address, expected to be invalid: ' + repr(address))
 
 
 def test_valid_hostname():
     for hostname in hostnames:
-        assert (valid_hostname(hostname),
+        assert valid_hostname(hostname), (
                 'Invalid hostname, expected to be valid: ' + repr(hostname))
 
     for hostname in invalid_hostnames:
-        assert (not valid_hostname(hostname),
+        assert not valid_hostname(hostname), (
                 'Valid hostname, expected to be invalid: ' + repr(hostname))
 
 
 def test_valid_port():
     for port in ports:
-        assert (valid_port(port),
+        assert valid_port(port), (
                 'Invalid port, expected to be valid: ' + repr(port))
 
     for port in invalid_ports:
-        assert (not valid_port(port),
+        assert not valid_port(port), (
                 'Valid port, expected to be invalid: ' + repr(port))

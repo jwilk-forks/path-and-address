@@ -81,5 +81,5 @@ def test_split_address():
         if isinstance(p, basestring):
             p = str(p).replace(':', '')
         host, port = split_address('%s:%s' % (h, p))
-        assert (str(host) == str(h) and str(port) == str(p),
+        assert str(host) == str(h) and str(port) == str(p), (
                 'Expected %s, got %s' % (repr((h, p)), repr((host, port))))
