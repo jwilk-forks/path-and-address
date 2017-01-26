@@ -8,7 +8,7 @@ def valid_address(address):
     """
     Determines whether the specified address string is valid.
     """
-    if not address:
+    if not address and address != 0:
         return False
 
     components = str(address).split(':')
