@@ -23,14 +23,12 @@ invalid_hostnames = [
     'http://example.com:8080',
     'example.com/',
     'example.com:8080/',
-    'example.com:0',
-    '0.0.0.0:0',
 ]
 
 
 ports = [0, 1, 80, 5000, 8080, 65535]
 invalid_ports = [
-    None, -80, -1, 0, 65536, 75000,
+    None, -80, -1, 65536, 75000,
     float('nan'), '', 'nan', 'hello', 'a string',
 ]
 
